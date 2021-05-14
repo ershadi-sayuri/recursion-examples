@@ -7,6 +7,7 @@ import { Product } from './recursion/product';
 import { Palindrome } from './recursion/palindrome';
 import { Reverse } from './recursion/reverse';
 import { FlatternArray } from './recursion/flatternArray';
+import { Capitalize } from './recursion/capitalize';
 
 import "antd/dist/antd.css";
 
@@ -37,6 +38,9 @@ function App() {
           </Col>
           <Col span={6}>
             <FlatternArray />
+          </Col>
+          <Col span={6}>
+            <Capitalize />
           </Col>
         </Row>
       </header>

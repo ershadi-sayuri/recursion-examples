@@ -22,7 +22,7 @@ export const FlatternArray: React.FunctionComponent = () => {
     }
 
     return (
-        <Card actions={[<>Answer: {answer}</>,]} >
+        <Card actions={[<>Answer: {JSON.stringify(answer)}</>,]} >
             <p>Write a recursive function that takes an array that may contain more arrays in it and returns an array with all values flattened.</p>
 
             <Formik
