@@ -6,6 +6,7 @@ import { FibonacciSeries } from './recursion/fibonacciSeries';
 import { Product } from './recursion/product';
 import { Palindrome } from './recursion/palindrome';
 import { Reverse } from './recursion/reverse';
+import { FlatternArray } from './recursion/flatternArray';
 
 import "antd/dist/antd.css";
 
@@ -33,6 +34,9 @@ function App() {
           </Col>
           <Col span={6}>
             <Reverse />
+          </Col>
+          <Col span={6}>
+            <FlatternArray />
           </Col>
         </Row>
       </header>
