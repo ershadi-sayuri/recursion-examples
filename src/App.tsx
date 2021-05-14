@@ -4,6 +4,7 @@ import { Cumulative } from './recursion/cumulative';
 import { Factorial } from './recursion/factorial';
 import { FibonacciSeries } from './recursion/fibonacciSeries';
 import { Product } from './recursion/product';
+import { Palindrome } from './recursion/palindrome';
 
 import "antd/dist/antd.css";
 
@@ -23,6 +24,11 @@ function App() {
           </Col>
           <Col span={6}>
             <Product />
+          </Col>
+        </Row>
+        <Row gutter={16}>
+          <Col span={6}>
+            <Palindrome />
           </Col>
         </Row>
       </header>
