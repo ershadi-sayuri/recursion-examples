@@ -5,6 +5,7 @@ import { Factorial } from './recursion/factorial';
 import { FibonacciSeries } from './recursion/fibonacciSeries';
 import { Product } from './recursion/product';
 import { Palindrome } from './recursion/palindrome';
+import { Reverse } from './recursion/reverse';
 
 import "antd/dist/antd.css";
 
@@ -29,6 +30,9 @@ function App() {
         <Row gutter={16}>
           <Col span={6}>
             <Palindrome />
+          </Col>
+          <Col span={6}>
+            <Reverse />
           </Col>
         </Row>
       </header>
