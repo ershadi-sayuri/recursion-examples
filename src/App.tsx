@@ -1,9 +1,10 @@
 import React from 'react';
+import { Col, Row } from 'antd';
 import { Cumulative } from './recursion/cumulative';
+import { Factorial } from './recursion/factorial';
+import { FibonacciSeries } from './recursion/fibonacciSeries';
 
 import "antd/dist/antd.css";
-import { Factorial } from './recursion/factorial';
-import { Col, Row } from 'antd';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Col>
           <Col span={6}>
             <Factorial />
+          </Col>
+          <Col span={6}>
+            <FibonacciSeries />
           </Col>
         </Row>
       </header>

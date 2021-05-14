@@ -3,26 +3,26 @@ import { Formik } from 'formik';
 import { Form, Input } from 'formik-antd';
 import { Card } from "antd";
 
-export const Cumulative: React.FunctionComponent = () => {
+export const FibonacciSeries: React.FunctionComponent = () => {
     const [answer, setAnswer] = useState<number>(0);
 
-    const calculateSum = (value: number) => {
-        let sum = value;
+    const calculateFibonacci = (value: number) => {
+        let fibonacci = value;
 
-        if (value > 0) {
-            sum = value + calculateSum(value - 1);
+        if ((value - 2) >= 0) {
+            fibonacci = calculateFibonacci(value - 1) + calculateFibonacci(value - 2);
         }
 
-        setAnswer(sum);
-        return sum;
+        setAnswer(fibonacci);
+        return fibonacci;
     }
 
     return (
         <Card actions={[<>Answer: {answer}</>,]} >
-            <p>Write a recursive function that takes a number and returns the sum of all the numbers from zero to that number.</p>
+            <p>Write a recursive function that takes a number ‘n’ and returns the nth number of the Fibonacci number.</p>
 
             <Formik
-                onSubmit={(values) => { calculateSum(values.Value) }}
+                onSubmit={(values) => { calculateFibonacci(values.Value) }}
                 initialValues={{ Value: 0 }} >
                 <Form layout="inline">
                     <Form.Item
