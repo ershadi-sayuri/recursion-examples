@@ -3,26 +3,26 @@ import { Formik } from 'formik';
 import { Form, Input } from 'formik-antd';
 import { Card } from "antd";
 
-export const Cumulative: React.FunctionComponent = () => {
+export const Factorial: React.FunctionComponent = () => {
     const [answer, setAnswer] = useState<number>(0);
 
-    const calculateSum = (value: number) => {
-        let sum = 0;
+    const calculateFactorial = (value: number) => {
+        let factorial = 1;
 
         if (value > 0) {
-            sum = value + calculateSum(value - 1);
+            factorial = value * calculateFactorial(value - 1);
         }
 
-        setAnswer(sum);
-        return sum;
+        setAnswer(factorial);
+        return factorial;
     }
 
     return (
         <Card actions={[<>Answer: {answer}</>,]} >
-            <p>Write a recursive function that takes a number and returns the sum of all the numbers from zero to that number.</p>
+            <p>Write a recursive function that takes a number as an input and returns the factorial of that number.</p>
 
             <Formik
-                onSubmit={(values) => { calculateSum(values.Value) }}
+                onSubmit={(values) => { calculateFactorial(values.Value) }}
                 initialValues={{ Value: 0 }} >
                 <Form layout="inline">
                     <Form.Item
