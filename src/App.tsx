@@ -3,6 +3,7 @@ import { Col, Row } from 'antd';
 import { Cumulative } from './recursion/cumulative';
 import { Factorial } from './recursion/factorial';
 import { FibonacciSeries } from './recursion/fibonacciSeries';
+import { Product } from './recursion/product';
 
 import "antd/dist/antd.css";
 
@@ -19,6 +20,9 @@ function App() {
           </Col>
           <Col span={6}>
             <FibonacciSeries />
+          </Col>
+          <Col span={6}>
+            <Product />
           </Col>
         </Row>
       </header>
