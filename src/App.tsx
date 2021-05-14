@@ -10,6 +10,7 @@ import { FlatternArray } from './recursion/flatternArray';
 import { Capitalize } from './recursion/capitalize';
 
 import "antd/dist/antd.css";
+import { NumberType } from './recursion/numberType';
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
           </Col>
           <Col span={6}>
             <Capitalize />
+          </Col>
+        </Row>
+        <Row gutter={16}>
+          <Col span={6}>
+            <NumberType />
           </Col>
         </Row>
       </header>
